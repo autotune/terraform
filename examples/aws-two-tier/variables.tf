@@ -4,12 +4,13 @@ Path to the SSH public key to be used for authentication.
 Ensure this keypair is added to your local SSH agent so provisioners can
 connect.
 
-Example: ~/.ssh/terraform.pub
+Example: ~/.ssh/id_rsa.pub
 DESCRIPTION
 }
 
 variable "key_name" {
-  description = "Desired name of AWS key pair"
+  description = "mac-local"
+  
 }
 
 variable "aws_region" {
@@ -17,12 +18,12 @@ variable "aws_region" {
   default = "us-west-2"
 }
 
-# Ubuntu Precise 12.04 LTS (x64)
+# Amazon Linux AMI 
 variable "aws_amis" {
   default = {
-    eu-west-1 = "ami-b1cf19c6"
-    us-east-1 = "ami-de7ab6b6"
-    us-west-1 = "ami-3f75767a"
-    us-west-2 = "ami-21f78e11"
+    eu-west-1 = "ami-f0091d91"
+    us-east-1 = "ami-f0091d91"
+    us-west-1 = "ami-f0091d91"
+    us-west-2 = "ami-f0091d91"
   }
 }
